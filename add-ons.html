@@ -4,12 +4,10 @@
     <title>Add-ons Mozilla</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
 	<style>
-	
-	#react-view {
-    height: 100%;
-}
 
 body {
     background: #0f1126;
@@ -17,10 +15,9 @@ body {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 1.15;
 }
 html {
-    -webkit-text-size-adjust: 100%;
     line-height: 1.15;
 }
 
@@ -43,8 +40,8 @@ html {
     padding: 0 12px;
 }
 .Header-content {
-    grid-column: 1/span 4;
-    grid-row: 2/4;
+    grid-column: .5/span 4;
+    grid-row: 1/4;
     margin: 0 0 36px;
     text-align: left;
     width: 100%;
@@ -78,7 +75,7 @@ h1 {
     color: #fff;
 }
 .Header-title {
-    background-image: url(/static-frontend/459ebe4….svg);
+    
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: 207px 48px;
@@ -89,13 +86,9 @@ h1 {
 }
 
 a {
-    background-color: transparent;
+    background-color: black;
 }
-a:-webkit-any-link {
-  
-    cursor: pointer;
-    text-decoration: underline;
-}
+
 h1.Header-title-wrapper {
     font-size: 40px;
 }
@@ -155,6 +148,88 @@ font-family:cursive;
 a {
     background-color: transparent;
 }
+
+.Header-search-form {
+    grid-column: 1/span 3;
+    grid-row: 1/3;
+    justify-self: end;
+    margin: 10px 0 0;
+    width: 100%;
+}
+.AutoSearchInput-search-box {
+    position: relative;
+    display:flex;
+    justify-content: right;
+    bottom: 2rem;
+    right:3rem;
+}
+.AutoSearchInput-icon-magnifying-glass {
+    left: 6px;
+    position: absolute;
+    right: auto;
+    top: 6px;
+}
+
+.AutoSearchInput-query {
+    padding-left: 12px;
+}
+.AutoSearchInput-query {
+    padding-right: 6px;
+}
+.AutoSearchInput-query {
+    background-color: #fff;
+    border: 1px solid teal;
+    border-radius: 10px;
+    color: #343a40;
+    height: 30px;
+    outline: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+.AutoSearchInput-query:hover {
+    border-color:teal;
+}
+.AutoSearchInput-query:focus{
+    border-color:teal;
+}
+
+.AutoSearchInput-submit-button {
+  display: none;
+  outline: none;
+
+    display: block;
+    position: absolute;
+    top: 6px;
+  }
+
+[type=search] {
+    outline-offset: -2px;
+}
+input {
+    background: #fff;
+    box-shadow: none;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 4px;
+    overflow: visible;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button {
+    background: none;
+    border: none;
+    text-transform: none;
+    overflow: visible;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
 .Page-content {
     background: #e9ecef;
     flex-grow: 1;
@@ -197,6 +272,334 @@ h3 {
     line-height: 1.2;
 }
 
+.CardList {
+    
+    margin: 3px 0;
+}
+section {
+    display: block;
+}
+.Card-header {
+  
+    background: #fff;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 1px;
+    margin-top: 0;
+    overflow: hidden;
+    padding: 10px 20px;
+    text-align: left;
+}
+.Home-content .Card-contents .AddonsCard-list {
+  grid-auto-flow: row dense;
+}
+.AddonsCard--horizontal ul.AddonsCard-list {
+    display: grid;
+    grid-template-columns: repeat(3,55%);
+}
+
+
+.CardList .Card-contents {
+    padding: 0;
+}
+.Card-contents {
+    background: #fff;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 1px;
+    margin-top: 0;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+      padding: 24px 36px;
+    text-align: left;
+}
+.Home-SubjectShelf-list {
+  align-self: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  flex-flow: row wrap;
+  align-self: auto;
+    flex-wrap: nowrap;
+}
+.Home-SubjectShelf-list-item {
+  flex-grow: 1;
+  list-style-type: none;
+    text-align: center;
+}
+.Home-SubjectShelf-link {
+  align-items: center;
+  display: flex;
+  font-size: default;
+  text-decoration: none;
+}
+.CardList ul li {
+  
+  color: black;
+    background: #fff;
+    margin-left: 2rem;
+    padding: 20px;
+}
+.SearchResult {
+    list-style-type: none;
+        grid-column: auto;
+        margin: 0 6px 1px;
+    margin: 0 0 1px;
+}
+
+li {
+    display: list-item;
+}
+
+.SearchResult-result {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    max-width: 720px;
+    padding: 0;
+    width: 100%;
+}
+.SearchResult-icon-wrapper {
+    order: 0;
+}
+.SearchResult-icon {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+}
+
+.SearchResult-contents {
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    justify-content: space-between;
+    margin: 0 10px;
+    order: 1;
+    width: 0;
+}
+.SearchResult-name {
+    align-items: flex-start;
+    color: #343a40;
+    font-family: cursive;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    row-gap: 16px;
+ 
+    width: 100%;
+}
+.SearchResult-name:hover{
+    color:blue;
+}
+.SearchResult-link,
+ .SearchResult-link:visited {
+    color: #333;
+    margin-right: 8px;
+ 
+}
+.SearchResult-link:hover {
+  color: blue;
+}
+
+a {
+    background-color: transparent;
+}
+
+.SearchResult-summary {
+    display: none;
+}
+p {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.SearchResult-metadata {
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    width: 100%;
+}
+.SearchResult-rating {
+    margin-right: 10px;
+}
+.SearchResult-rating {
+    display: inline-block;
+    width: auto;
+}
+.SearchResult-rating {
+    justify-content: flex-start;
+    margin: 0;
+}
+
+.Rating--small .Rating-star {
+    min-width: 13px;
+}
+
+.checked {
+color:black;
+}
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    border: 0;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.Card-footer {
+    background: #fff;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    margin-top: 1px;
+    overflow: hidden;
+    overflow: inherit;
+    padding: 0;
+    text-align: bottom;
+}
+.Card-footer-link,
+.Card-footer-text
+  a:link,
+  a:visited {
+    color: grey;
+    display:block;
+    font-weight:normal;
+    text-align: center;
+  }
+
+
+
+
+.Footer {
+    background: #051818;
+    color: #fff;
+    font-family: Inter,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    width: 100%;
+}
+  .Footer a:hover{
+    color: white;
+    font-weight: 400;
+    margin: 0 0 12px;
+  }
+
+
+
+.Footer-wrapper {
+  padding: 58px 20px;
+    display: grid;
+    grid-template-areas:
+      'logo amo-links browsers-links product-links'
+      'legal-links legal-links legal-links legal-links'
+      'copyright copyright copyright language';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0 auto;
+    max-width: max-content-width;
+    width: 100%;
+  }
+
+
+.Footer-amo-links {
+  grid-area: amo-links;
+}
+
+.Footer-browsers-links {
+  grid-area: browsers-links;
+}
+
+.Footer-product-links {
+  grid-area: product-links;
+}
+
+.Footer-links-header {
+  margin: 40px 0 0;
+}
+ 
+
+
+.Footer-links {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+}
+.Footer-links li {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .Footer-link-social {
+    display: inline-block;
+  }
+
+
+.Footer-legal-links {
+  list-style: none;
+  margin-top: 40px;
+  padding: 0;
+}
+  .Footer-legal-links  li {
+    display: inline-block;
+  }
+
+ 
+
+.Footer-links-social {
+  margin:30px;
+  display:flex;
+ gap: 1.5rem;
+}
+
+.Footer-copyright {
+  font-size: 14px;
+  grid-area: copyright;
+}
+
+.Footer-mozilla{
+  display: inline-block;
+  margin-top: 10px;
+    margin-bottom: auto;
+    margin-left: 3rem;
+  }
+
+.Footer-language-picker {
+  grid-area: language;
+    margin-top: 1rem;
+    margin-left:3rem;
+  }
+
+  .LanguagePicker-header {
+
+    display: inline-block;
+  }
+
+  /* The language picker shows text in a bunch of different locales, use a
+     generic sans-serif font to avoid downloading the full Inter variant
+     just for this. */
+
+  .LanguagePicker-selector {
+    background-color: white;
+    color: black;
+    display: inline-block;
+    font-family: sans-serif;
+  }
+
+
+
 
 	</style>
 	</head>
@@ -207,17 +610,35 @@ h3 {
                     <div class="Header-wrapper">
                         <div class="Header-content">
                             <h1 class="Header-title-wrapper">
-                                <a class="Header-title" href="/en-US/android/">
+                                <a class="Header-title" href=#>
 								<img src="https://addons.mozilla.org/static-frontend/459ebe418a9783cd0b80bdd8b98e5faa.svg">
                                     <span class="visually-hidden">Firefox Browser Add-ons</span>
                                 </a>
                             </h1>
                         </div>
                             <div class="Header-user-and-external-links">
-                                <a class="Button Button--none Header-authenticate-button Header-button Button--micro" href="#login">Log in</a>
+                                <a class="Button Button--none Header-authenticate-button Header-button Button--micro" href=#>Log in</a>
                             </div>
 					</div>
-	</header>
+	
+
+    <form action=# class="SearchForm Header-search-form" method="GET" data-no-csrf="true" role="search">
+        <div class="AutoSearchInput">
+            <label class="AutoSearchInput-label visually-hidden" for="AutoSearchInput-q">Search</label>
+            <div class="AutoSearchInput-search-box">
+                <span class="Icon Icon-magnifying-glass AutoSearchInput-icon-magnifying-glass"></span>
+                <div role="combobox" aria-haspopup="listbox" aria-owns="react-autowhatever-1" aria-expanded="false">
+                    <input type="search" autocomplete="off" aria-autocomplete="list" aria-controls="react-autowhatever-1" class="AutoSearchInput-query" id="AutoSearchInput-q" maxlength="100" minlength="2" name="q" placeholder="Find add-ons" value="">
+                    <div id="react-autowhatever-1" role="listbox"></div>
+                </div>
+                <button class="AutoSearchInput-submit-button" type="submit">
+                    <span class="visually-hidden">Search</span>
+                    <span class="Icon Icon-arrow"></span>
+    </button>
+</div>
+</div>
+    </form>
+</header>
 					<div class="Page-content">
 						<div class="Page Page-no-hero-promo">
 								<div class="AppBanner"></div>
@@ -228,14 +649,407 @@ h3 {
 								<h2 class="Home-heroHeader-title">Extensions are like apps for Firefox.</h2>
 								<h3 class="Home-heroHeader-subtitle">They add features to Firefox to make browsing faster, safer, or just plain fun.</h3>
 								</div>
-                                </div>
-                                </div>
-                                </div>
-                                </div>
-                                </div>
-                                </div>
-                                </body>
-                                </html>
+<!--next section-->
+                                <section class="Card CardList AddonsCard LandingAddonsCard Home-RecommendedExtensions AddonsCard--horizontal Card--photon">
+                                    <header class="Card-header">
+                                        <div class="Card-header-text">Recommended extensions</div>
+                                    </header>
+                                    <div class="Card-contents">
+                                        <ul class="AddonsCard-list">
+                                            <li class="SearchResult">
+                                                <div class="SearchResult-wrapper">
+                                                    <div class="SearchResult-result">
+                                                        <div class="SearchResult-icon-wrapper">
+                                                            <img class="SearchResult-icon" src="https://addons.mozilla.org/user-media/addon_icons/811/811592-64.png?modified=c75499b8" alt="Video Background Play Fix">
+                                                        </div>
+                                                        <div class="SearchResult-contents">
+                                                            <h2 class="SearchResult-name">
+                                                                <a class="SearchResult-link" href=# style="text-decoration: none;">Video Background Play Fix</a>
+                                                            </h2>
+                                                            <p class="SearchResult-summary">Some sites may not work with Firefox for Android video background play feature. This add-on provides a quick fix by blocking the Page Visibility API and the Fullscreen API.</p>
+                                                            <div class="SearchResult-metadata">
+                                                                <div class="SearchResult-rating">
+                                                                    <div class="Rating Rating--small" title="Rated 4.5 out of 5">
+                                                                        <div class="fa fa-star checked"></div>                                                                        
+                                                                        <div class="fa fa-star checked"></div>                                                                       
+                                                                            <div class="fa fa-star checked"></div>                                                                        
+                                                                            <div class="fa fa-star checked"></div>                                                                        
+                                                                            <div class="fa fa-star-half-o checked"></div>  
+                                                                        <span class="visually-hidden">Rated 4.5 out of 5</span>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="SearchResult-author SearchResult--meta-section">JanH</h3>
+                                                            </div>
+                                                        </div>
+                                                        <h3 class="SearchResult-users SearchResult--meta-section">
+                                                            <span class="Icon Icon-user-fill SearchResult-users-icon"></span>
+                                                            <span class="SearchResult-users-text">152,379 users</span>
+                                                        </h3>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="SearchResult">
+                                                <div class="SearchResult-wrapper">
+                                                    
+                                                    <div class="SearchResult-result">
+                                                        <div class="SearchResult-icon-wrapper">
+                                                            <img class="SearchResult-icon" src="https://addons.mozilla.org/user-media/addon_icons/521/521554-64.png?modified=mcrushed" alt="Decentraleyes"></div>
+                                                            <div class="SearchResult-contents">
+                                                                <h2 class="SearchResult-name">
+                                                                    <a class="SearchResult-link" href=# style="text-decoration: none;">Decentraleyes</a>
+                                                                </h2>
+                                                                <p class="SearchResult-summary">Protects you against tracking through "free", centralized, content delivery. It prevents a lot of requests from reaching networks like Google Hosted Libraries, and serves local files to keep sites from breaking. Complements regular content blockers.</p>
+                                                                <div class="SearchResult-metadata">
+                                                                    <div class="SearchResult-rating">
+                                                                        <div class="Rating Rating--small" title="Rated 4.8 out of 5">
+                                                                            <div class="fa fa-star checked"></div>                                                                        
+                                                                            <div class="fa fa-star checked"></div>                                                                       
+                                                                                <div class="fa fa-star checked"></div>                                                                        
+                                                                                <div class="fa fa-star checked"></div>                                                                        
+                                                                                <div class="fa fa-star-half-o checked"></div>  
+                                                                            <span class="visually-hidden">Rated 4.8 out of 5</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <h3 class="SearchResult-author SearchResult--meta-section">Thomas Rientjes</h3>
+                                                                </div>
+                                                            </div>
+                                                            <h3 class="SearchResult-users SearchResult--meta-section">
+                                                                <span class="Icon Icon-user-fill SearchResult-users-icon"></span>
+                                                                <span class="SearchResult-users-text">266,317 users</span>
+                                                            </h3>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="SearchResult">
+                                                    <div class="SearchResult-wrapper">
+                                                        <div class="SearchResult-result">
+                                                            <div class="SearchResult-icon-wrapper">
+                                                                <img class="SearchResult-icon" src="https://addons.mozilla.org/user-media/addon_icons/9/9609-64.png?modified=mcrushed" alt="Ghostery – Privacy Ad Blocker">
+                                                            </div>
+                                                                <div class="SearchResult-contents">
+                                                                    <h2 class="SearchResult-name">
+                                                                        <a class="SearchResult-link" href=# style="text-decoration: none;">Ghostery – Privacy Ad Blocker</a>
+                                                                    </h2>
+                                                                    <p class="SearchResult-summary">Ghostery is a powerful privacy extension. Block ads, stop trackers and speed up websites.</p>
+                                                                    <div class="SearchResult-metadata">
+                                                                        <div class="SearchResult-rating">
+                                                                            <div class="Rating Rating--small" title="Rated 4.3 out of 5">
+                                                                                <div class="fa fa-star checked"></div>                                                                        
+                                                                    <div class="fa fa-star checked"></div>                                                                       
+                                                                        <div class="fa fa-star checked"></div>                                                                        
+                                                                        <div class="fa fa-star checked"></div>                                                                        
+                                                                        <div class="fa fa-star-half-o checked"></div>  
+                                                                                <span class="visually-hidden">Rated 4.3 out of 5</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <h3 class="SearchResult-author SearchResult--meta-section">Ghostery</h3>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="SearchResult-users SearchResult--meta-section">
+                                                                    <span class="Icon Icon-user-fill SearchResult-users-icon"></span>
+                                                                    <span class="SearchResult-users-text">1,142,499 users</span>
+                                                                </h3>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="SearchResult">
+                                                        <div class="SearchResult-wrapper">
+                                                            <div class="SearchResult-result">
+                                                                <div class="SearchResult-icon-wrapper">
+                                                                    <img class="SearchResult-icon" src="https://addons.mozilla.org/user-media/addon_icons/607/607454-64.png?modified=mcrushed" alt="uBlock Origin">
+                                                                </div>
+                                                                <div class="SearchResult-contents">
+                                                                    <h2 class="SearchResult-name">
+                                                                        <a class="SearchResult-link" href=#  style="text-decoration: none;">uBlock Origin</a>
+                                                                    </h2>
+                                                                    <p class="SearchResult-summary">Finally, an efficient wide-spectrum content blocker. Easy on CPU and memory.</p>
+                                                                    <div class="SearchResult-metadata">
+                                                                        <div class="SearchResult-rating">
+                                                                            <div class="Rating Rating--small" title="Rated 4.8 out of 5">
+                                                                                <div class="fa fa-star checked"></div>                                                                        
+                                                                    <div class="fa fa-star checked"></div>                                                                       
+                                                                        <div class="fa fa-star checked"></div>                                                                        
+                                                                        <div class="fa fa-star checked"></div>                                                                        
+                                                                        <div class="fa fa-star checked"></div>  
+                                                                                <span class="visually-hidden">Rated 4.8 out of 5</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <h3 class="SearchResult-author SearchResult--meta-section">Raymond Hill</h3>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="SearchResult-users SearchResult--meta-section">
+                                                                    <span class="Icon Icon-user-fill SearchResult-users-icon"></span>
+                                                                    <span class="SearchResult-users-text">6,403,736 users</span>
+                                                                </h3>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="SearchResult">
+                                                        <div class="SearchResult-wrapper">
+                                                            <div class="SearchResult-result">
+                                                                <div class="SearchResult-icon-wrapper">
+                                                                    <img class="SearchResult-icon" src="https://addons.mozilla.org/user-media/addon_icons/735/735894-64.png?modified=27707d93" alt="Bitwarden - Free Password Manager">
+                                                                </div>
+                                                                <div class="SearchResult-contents">
+                                                                    <h2 class="SearchResult-name">
+                                                                        <a class="SearchResult-link" href=#  style="text-decoration: none;">Bitwarden - Free Password Manager</a>
+                                                                    </h2>
+                                                                    <p class="SearchResult-summary">A secure and free password manager for all of your devices.</p>                                                                    <div class="SearchResult-metadata">
+                                                                        <div class="SearchResult-rating">
+                                                                            <div class="Rating Rating--small" title="Rated 4.8 out of 5">
+                                                                                <div class="fa fa-star checked"></div>                                                                        
+                                                                    <div class="fa fa-star checked"></div>                                                                       
+                                                                        <div class="fa fa-star checked"></div>                                                                        
+                                                                        <div class="fa fa-star checked"></div>                                                                        
+                                                                        <div class="fa fa-star checked"></div>  
+                                                                                <span class="visually-hidden">Rated 4.8 out of 5</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <h3 class="SearchResult-author SearchResult--meta-section">Bitwarden Inc.</h3>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="SearchResult-users SearchResult--meta-section">
+                                                                    <span class="Icon Icon-user-fill SearchResult-users-icon"></span>
+                                                                    <span class="SearchResult-users-text">613,092 users</span>
+                                                                </h3>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+
+                                                    <li class="SearchResult">
+                                                        <div class="SearchResult-wrapper">
+                                                            <div class="SearchResult-result">
+                                                                <div class="SearchResult-icon-wrapper">
+                                                                    <img class="SearchResult-icon" src="https://addons.mozilla.org/user-media/addon_icons/735/735894-64.png?modified=27707d93" alt="Bitwarden - Free Password Manager">
+                                                                </div>
+                                                                <div class="SearchResult-contents">
+                                                                    <h2 class="SearchResult-name">
+                                                                        <a class="SearchResult-link" href=#  style="text-decoration: none;">Google Search Fixer</a>
+                                                                    </h2>
+                                                                    <p class="SearchResult-summary">Override the user-agent string presented to Google Search pages to receive the search experience shown to Chrome.</p>
+                                                                    <div class="SearchResult-metadata">
+                                                                        <div class="SearchResult-rating">
+                                                                            <div class="Rating Rating--small" title="Rated 4.4 out of 5">
+                                                                                <div class="fa fa-star checked"></div>                                                                        
+                                                                    <div class="fa fa-star checked"></div>                                                                       
+                                                                        <div class="fa fa-star checked"></div>                                                                        
+                                                                        <div class="fa fa-star checked"></div>                                                                        
+                                                                        <div class="fa fa-star-half-o checked"></div>  
+                                                                                <span class="visually-hidden">Rated 4.4 out of 5</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <h3 class="SearchResult-author SearchResult--meta-section">Thomas Wisniewski</h3>
+                                                                    </div>
+                                                                </div>
+                                                                <h3 class="SearchResult-users SearchResult--meta-section">
+                                                                    <span class="Icon Icon-user-fill SearchResult-users-icon"></span>
+                                                                    <span class="SearchResult-users-text">110,788 users</span>
+                                                                </h3>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                            </ul>
+                                            </div>
+                                            
+                                           
+                                                    <footer class="Card-footer Card-footer-link">
+                                                        <a href=# >See more recommended extensions</a>
+                                                
+                                                 
+                                                    </div>
+                                                    </div>
+                                                    </div>
+                                                    </div>
+                                                </footer>
+                                                </section>
+                                                    <footer class="Footer">
+                                                        
+                                                        <div class="Footer-wrapper">
+                                                            <div class="Footer-mozilla">               
+                                                                <img src="mozilla-logo-1.png" height=10%" width="25%">
+                                                            </div>
+
+                                                            <section class="Footer-amo-links">
+                                                                
+                                                                <h4 class="Footer-links-header">Add-ons</h4>
+                                                                <ul class="Footer-links">
+                                                                    <li>
+                                                                        <a href=# >About</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="Footer-blog-link" href=# >Firefox Add-ons Blog</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="Footer-extension-workshop-link" href=# >Extension Workshop</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href=# >Developer Hub</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="Footer-developer-policies-link" href=# >Developer Policies</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="Footer-community-blog-link" href=# >Community Blog</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href=# >Forum</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="Footer-bug-report-link" href=# >Report a bug</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href=# >Review Guide</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </section>
+                                                            <section class="Footer-browsers-links">
+                                                                <h4 class="Footer-links-header">Browsers</h4>
+                                                                <ul class="Footer-links">
+                                                                    <li>
+                                                                        <a class="Footer-desktop-link" href=# >Desktop</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="Footer-mobile-link" href=# >Mobile</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="Footer-enterprise-link" href=# >Enterprise</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </section>
+                                                            <section class="Footer-product-links">
+                                                                <h4 class="Footer-links-header">Products</h4>
+                                                                <ul class="Footer-links">
+                                                                    <li>
+                                                                        <a class="Footer-browsers-link" href=# >Browsers</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="Footer-vpn-link" href=# >VPN</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="Footer-relay-link" href=# >Relay</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="Footer-monitor-link" href=# >Monitor</a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="Footer-pocket-link" href=# >Pocket</a>
+                                                                    </li>
+                                                                </ul>
+                                                                <ul class="Footer-links Footer-links-social">
+                                                                    <li class="Footer-link-social">
+                                                                        <a href=#>
+                                                                            <span class="fa fa-twitter"></span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="Footer-link-social">
+                                                                        <a href=#>
+                                                                            <span class="fa fa-instagram"></span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="Footer-link-social">
+                                                                        <a href=#>
+                                                                            <span class="fa fa-youtube"></span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="Footer-link-social">
+                                                                        <a href=#>
+                                                                            <span class="fa fa-facebook"></span>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </section>
+                                                            <ul class="Footer-legal-links">
+                                                                <li>
+                                                                    <a class="Footer-privacy-link" href=# >Privacy</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="Footer-cookies-link" href=# >Cookies</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="Footer-legal-link" href=# >Legal</a>
+                                                                </li>
+                                                            </ul>
+                                                            <p class="Footer-copyright">Except where otherwise <a href=# >noted</a>, content on this site is licensed under the <a href=# >Creative Commons Attribution Share-Alike License v3.0</a> or any later version.</p>
+                                                            <div class="Footer-language-picker">
+                                                                <div class="LanguagePicker">
+                                                                    <label for="lang-picker" class="LanguagePicker-header">Change language</label>
+                                                                    <select class="LanguagePicker-selector" id="lang-picker">
+                                                                        <option value="af">Afrikaans</option>
+                                                                        <option value="ar">عربي</option>
+                                                                        <option value="ast">Asturianu</option>
+                                                                        <option value="az">Azərbaycanca</option>
+                                                                        <option value="bg">Български</option>
+                                                                        <option value="bn">বাংলা</option>
+                                                                        <option value="bs">Bosanski</option>
+                                                                        <option value="ca">Català</option>
+                                                                        <option value="cak">Maya Kaqchikel</option>
+                                                                        <option value="cs">Čeština</option>
+                                                                        <option value="da">Dansk</option>
+                                                                        <option value="de">Deutsch</option>
+                                                                        <option value="dsb">Dolnoserbšćina</option>
+                                                                        <option value="el">Ελληνικά</option>
+                                                                        <option value="en-CA">English (Canadian)</option>
+                                                                        <option value="en-GB">English (British)</option>
+                                                                        <option value="en-US" selected="">English (US)</option>
+                                                                        <option value="es">Español</option>
+                                                                        <option value="et">Eesti keel</option>
+                                                                        <option value="eu">Euskara</option>
+                                                                        <option value="fa">فارسی</option>
+                                                                        <option value="fi">suomi</option>
+                                                                        <option value="fr">Français</option>
+                                                                        <option value="fy-NL">Frysk</option>
+                                                                        <option value="ga-IE">Gaeilge</option>
+                                                                        <option value="he">עברית</option>
+                                                                        <option value="hr">Hrvatski</option>
+                                                                        <option value="hsb">Hornjoserbsce</option>
+                                                                        <option value="hu">magyar</option>
+                                                                        <option value="ia">Interlingua</option>
+                                                                        <option value="id">Bahasa Indonesia</option>
+                                                                        <option value="is">íslenska</option>
+                                                                        <option value="it">Italiano</option>
+                                                                        <option value="ja">日本語</option>
+                                                                        <option value="ka">ქართული</option>
+                                                                        <option value="kab">Taqbaylit</option>
+                                                                        <option value="ko">한국어</option>
+                                                                        <option value="lt">lietuvių kalba</option>
+                                                                        <option value="lv">Latviešu</option>
+                                                                        <option value="mk">Македонски</option>
+                                                                        <option value="mn">Монгол</option>
+                                                                        <option value="ms">Melayu</option>
+                                                                        <option value="mt">Malti</option>
+                                                                        <option value="nb-NO">Norsk bokmål</option>
+                                                                        <option value="nl">Nederlands</option>
+                                                                        <option value="nn-NO">Norsk nynorsk</option>
+                                                                        <option value="pa-IN">ਪੰਜਾਬੀ (ਭਾਰਤ)</option>
+                                                                        <option value="pl">Polski</option>
+                                                                        <option value="pt-BR">Português (do&nbsp;Brasil)</option>
+                                                                        <option value="pt-PT">Português (Europeu)</option>
+                                                                        <option value="ro">Română</option>
+                                                                        <option value="ru">Русский</option>
+                                                                        <option value="si">සිංහල</option>
+                                                                        <option value="sk">slovenčina</option>
+                                                                        <option value="sl">Slovenščina</option>
+                                                                        <option value="sq">Shqip</option>
+                                                                        <option value="sv-SE">Svenska</option>
+                                                                        <option value="te">తెలుగు</option>
+                                                                        <option value="th">ไทย</option>
+                                                                        <option value="tr">Türkçe</option>
+                                                                        <option value="uk">Українська</option>
+                                                                        <option value="ur">اُردو</option>
+                                                                        <option value="vi">Tiếng Việt</option>
+                                                                            <option value="zh-CN">中文 (简体)</option>
+                                                                            <option value="zh-TW">正體中文 (繁體)</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                    </footer>
+                                                    </div>
+                                                    </div>
+                                                    </body>
+                                                    </html>
                                 
 
 								
